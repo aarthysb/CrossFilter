@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div>
+        <select id="combo">
+            <option value="all">All</option>
+            <option value="http_404">HTTP 404</option>
+            <option value="http_302">HTTP 302</option>
+            <option value="http_200">HTTP 200</option>
+        </select>
+    </div>
+    <hr>
+    <div id="charts">
+        <div id="chart1" class="chart"></div>
+        <div id="chart3" class="chart"></div>
+    </div>
+{% endblock %}
