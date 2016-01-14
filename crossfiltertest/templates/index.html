@@ -1,16 +1,36 @@
 {% extends "layout.html" %}
 {% block content %}
+<div>
     <div>
-        <select id="combo">
+        <!--<select id="combo">
             <option value="all">All</option>
             <option value="http_404">HTTP 404</option>
             <option value="http_302">HTTP 302</option>
             <option value="http_200">HTTP 200</option>
+        </select> -->
+        <select id="timecombo">
+            <option value = 0>Date</option>
+            <option value = 1>Day of Month</option>
+            <option value = 2>Month</option>
+            <option value = 3>Year</option>
         </select>
     </div>
+</div>
     <hr>
-    <div id="charts">
+    <!--<div id="charts">
         <div id="chart1" class="chart"></div>
         <div id="chart3" class="chart"></div>
+    </div>-->
+    <div id="charts" style="float:left; background-color:black;margin:20px;">
+        <div id="map" ></div>
     </div>
+<div >
+<div id="color-chips" style="float:left"><svg width="24" height="270"><rect fill="rgb(202,0,32)" width="24" height="24" y="0"></rect><rect fill="rgb(244,165,130)" width="24" height="24" y="24"></rect><rect fill="rgb(247,247,247)" width="24" height="24" y="48"></rect><rect fill="rgb(146,197,222)" width="24" height="24" y="72"></rect><rect fill="rgb(5,113,176)" width="24" height="24" y="96"></rect></svg></div>
+<div id="color-values" ><textarea readonly="" style="line-height:24px; height:120px; border:none;">-1
+-0.5
+0
+0.5
+1</textarea>
+    </div>
+</div>
 {% endblock %}
